@@ -1,0 +1,93 @@
+POST /domains/
+X-RPP-clTRID: ABC-12345
+
+{
+    "name": "example.example", //required -> UTF-8 or IDN? Or both/any?
+    "duration": "P1Y",  // optional -> RFC 3339
+    "registrant": [
+        "CTC42977"
+    ], // array for the case if there is more than one
+    "registrant": [
+        {
+            "id": "CTC42977" // if id is present it is a reference
+        },
+        {
+            "id": "NEWID",
+            "name": "John Doe", // if content is present the object is to be created. This would be outside of EPP Mapping Definition
+            "Address": ...
+        }
+    ], // array for the case if there is more than one
+    "authInfo": {
+        "pw": "Test123456789",
+        "hash": "XXXX" // alternative/extension
+        ...
+    },
+    "ns-2": [
+        {
+            "name": "ns1.example.net"
+        },
+        {
+            "name": "ns1.example.com", // if content is present the object is to be created. This would be outside of EPP Mapping Definition
+            "addr": { // optional, required if in the same zone as domain name
+                "ipv4": [
+                    "192.0.2.2",
+                    "192.0.2.29"
+                ],
+                "ipv6": [
+                    "2001:DB8:0:0:8:800:200C:417A"
+                ]
+            }
+        }
+    ],
+    "ns": {
+        "hostObj": [
+            {
+                "name": "ns1.example.net"
+            },
+            {
+                "name": "ns1.example.com", // if content is present the object is to be created. This would be outside of EPP Mapping Definition
+                "addr": {
+                    "ipv4": [
+                        "192.0.2.2",
+                        "192.0.2.29"
+                    ],
+                    "ipv6": [
+                        "2001:DB8:0:0:8:800:200C:417A"
+                    ]
+                }
+            }
+        ],
+        "hostAttr": [
+            {
+                "name": "ns1.example.com", // if content is present the object is to be created. This would be outside of EPP Mapping Definition
+                "addr": {
+                    "ipv4": [
+                        "192.0.2.2",
+                        "192.0.2.29"
+                    ],
+                    "ipv6": [
+                        "2001:DB8:0:0:8:800:200C:417A"
+                    ]
+                }
+            }
+        ]
+    },
+    "contacts": [
+      {
+        "value": "CTC42977",
+        "type": "admin"
+      },
+      {
+        "value": "CTC42977",
+        "type": "tech"
+      }
+    ],
+    "dnsSec": [
+        {
+        "keyTag": 11627,
+        "algorithm": "RSASHA256",
+        "digestType": "SHA256",
+        "digest": "2C1BF38D591521CF0ABC7FECFEC11E95BC2F6BE83F2CD6623BB606C51D2EFB3A"
+        }
+    ]
+}

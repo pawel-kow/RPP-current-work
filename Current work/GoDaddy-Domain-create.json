@@ -1,0 +1,28 @@
+{
+  "consent": {
+    "agreedAt": "string",
+    "agreedBy": "string",
+    "agreementKeys": [
+      "string"
+    ]
+  },
+  "contactAdmin": {
+    [...]
+  },
+  "contactBilling": {
+    [...]
+  },
+  "contactRegistrant": {
+    [...]
+  },
+  "contactTech": {
+    [...]
+  },
+  "domain": "string",
+  "nameServers": [
+    "string"
+  ],
+  "period": 1,
+  "privacy": false,
+  "renewAuto": true
+}

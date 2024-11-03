@@ -1,0 +1,22 @@
+{
+    "domain": {
+        "name": "kasskoer.ee",
+        "registrant": "ATSAA:KARL",
+        "period": 1,
+        "period_unit": "y",
+        "admin_contacts": [
+            "ATSAA:KARL"
+        ],
+        "tech_contacts": [
+            "ATSAA:KARL"
+        ],
+        "nameservers_attributes": [
+            {
+                "hostname": "ns1.kreative.ee"
+            },
+            {
+                "hostname": "ns2.kreative.ee"
+            }
+        ]
+    }
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<epp xmlns="urn:ietf:params:xml:ns:epp-1.0">
+  <command>
+    <clTRID>ABC-12345</clTRID>
+    <create>
+      <domain:create
+       xmlns:domain="urn:ietf:params:xml:ns:domain-1.0">
+        <domain:name>"example.fr</domain:name>
+        <domain:period unit="y">1</domain:period>
+        <domain:ns>
+          <domain:hostObj>ns1.example.net</domain:hostObj>
+        </domain:ns>
+        <domain:registrant>CTC42977</domain:registrant>
+        <domain:contact type="admin">CTC42977</domain:contact>
+        <domain:contact type="tech">CTC42977</domain:contact>
+        <domain:authInfo>
+          <domain:pw>Test123456789</domain:pw>
+        </domain:authInfo>
+      </domain:create>
+    </create>
+    <extension>
+      <secDNS:create
+      xmlns:secDNS="urn:ietf:params:xml:ns:secDNS-1.1">
+      <secDNS:maxSigLife>604800</secDNS:maxSigLife>
+      <secDNS:dsData>
+        <secDNS:keyTag>11627</secDNS:keyTag>
+        <secDNS:alg>3</secDNS:alg>
+        <secDNS:digestType>1</secDNS:digestType>
+        <secDNS:digest>2C1BF38D591521CF0ABC7FECFEC11E95BC2F6BE83F2CD6623BB606C51D2EFB3A</secDNS:digest>
+      </secDNS:dsData>
+      </secDNS:create>
+    </extension>
+  </command>
+</epp>

@@ -1,0 +1,29 @@
+{
+  "name": "example.fr",
+  "durationInYears": "1",
+  "registrantClientId": "CTC42977",
+  "authorizationInformation": "Test123456789",
+  "nameServers": [
+    "ns1.example.net"
+  ],
+  "contacts": [
+    {
+      "clientId": "CTC42977",
+      "role": "ADMINISTRATIVE"
+    },
+    {
+      "clientId": "CTC42977",
+      "role": "TECHNICAL"
+    }
+  ],
+  "extensions": {
+    "dnsSec": [
+      {
+        "keyTag": 11627,
+        "algorithm": "RSASHA256",
+        "digestType": "SHA256",
+        "digest": "2C1BF38D591521CF0ABC7FECFEC11E95BC2F6BE83F2CD6623BB606C51D2EFB3A"
+      }
+    ]
+  }
+}
